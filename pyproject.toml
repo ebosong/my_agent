@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "harnessx"
+version = "0.1.0"
+description = "A minimal, evidence-first agent harness (loop, tools, JSONL events, resume, context compaction, exact edit_file)"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+harnessx = "harnessx.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "bronze: loop + tools + events",
+  "silver: limits + resume",
+  "gold: context compaction + edit_file",
+  "real: needs a real model endpoint (skipped without an API key)",
+]

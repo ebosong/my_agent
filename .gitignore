@@ -1,0 +1,40 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python environments and build output
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+
+# Agent sessions and local workspaces
+.harnessx/
+.myagent/
+workspace/
+
+# Local tests, experiments, course materials and references
+/tests/
+/experiments/
+/quests/
+/scripts/
+/skills/
+/docs/
+/refs/
+/*.pdf
+/*.docx
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
